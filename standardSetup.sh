@@ -22,6 +22,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose docker-compose-plugin -y
+sudo usermod -aG docker $USER
 sudo docker run hello-world
 
 sudo docker volume create portainer_data
